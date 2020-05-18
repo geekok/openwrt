@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ミニルーターWT3020Hの紹介 - OpenWrt Geek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Droid+Sans%3A700%7CLato%3A900%7CAnton&#038;ver=5.2.6' type='text/css' media='all' />
+  
+  <link rel="icon" href="https://geekok.github.io/openwrt/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/openwrt/css/style.min.5487189c94ec777c5e6bfd361598139f1bebfeafda734028ab73c23c5840c1c4.css">
+  
+  
+  
+  <script data-ad-client="ca-pub-2935823567059327" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-ホーム">
+      <a href="/openwrt/">
+        <span>ホーム</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-使用方法">
+      <a href="/openwrt/usage/">
+        <span>使用方法</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://geekok.github.io/openwrt/"><img alt="Logo" src="/openwrt/images/router-logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://geekok.github.io/openwrt/"><img alt="Logo" src="/openwrt/images/router-logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-ホーム">
+      <a href="/openwrt/">
+        <span>ホーム</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-使用方法">
+      <a href="/openwrt/usage/">
+        <span>使用方法</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Usage</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/introduction-to-openwrt/">OpenWrtの紹介</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://geekok.github.io/openwrt/usage/introduction-to-wt3020-mini-router/">ミニルーターWT3020Hの紹介</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/install-openwrt-on-wt3020-replacing-factory-image/">WT3020HをOpenWrt化する方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-lan-ip/">LAN IP変更方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-wifi/">WiFiの設定方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-wan/">インターネット接続方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-system/">ルーター名及び時計の設定</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-japanese/">管理画面の日本語化</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-reset/">ルーターのリセット</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-upgrade/">アップグレード方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-backup-setting/">設定のバックアップと復元</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/">OpenVPNのインストール</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/">OpenVPNクライアントとして使う</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-development/">OpenWrtの開発</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">ミニルーターWT3020Hの紹介</h1>
+<div class="content ">
+  <p>OpenWrtをインストールできる無線ルーターは大きく分けて2種類あります。</p>
+<ol>
+<li>
+<p>TP-LinkやNetgearなどの大手メーカーの製品は一般的に改造できませんが、コアなファンや技術者によってごく一部のモデルでOpenWrtバーションが開発されています。そのような無線ルーターに特化したOpenWrtファームウェアに入れ替えれば、OpenWrtルーターに変化させられます。</p>
+</li>
+<li>
+<p>一部のマイナーなメーカー(ほとんどが中国の会社)が、最初からOpenWrtに向いたハードウェアを使って製造した、OpenWrtベースのルーターがあります。出荷状態のファームウェアは既にOpenWrtをカスタマイズしたもので、簡単に他のOpenWrtバーションに入れ替えることができます。「Nexx WT3020H」はその一つです。</p>
+</li>
+</ol>
+<h3 id="ミニルーターwt3020hの魅力">ミニルーターWT3020Hの魅力</h3>
+<p>このミニルーターWT3020Hは発売されてからしばらくたった少し古いルーターですが、安定性の高いハードウェアが使われており、OpenWrtのオフィシャルサイトでもサポートされている良い機種です。
+WT3020HはOpenWrtの古いバージョンから最新バージョンまで全部カバーしています。</p>
+<p>OpenWrtに対応しているルーターはWT3020H以外にも様々売られていますが、それらに比べて、WT3020HはとてもOpenWrt化しやすい、OpenWrtの勉強や研究にも向いているオープンソースのルーターです。</p>
+<h3 id="wt3020hのスペック">WT3020Hのスペック</h3>
+<ul>
+<li>
+<p>購入先: <a href="https://amzn.to/3cPMA3l">amazon.co.jp</a></p>
+</li>
+<li>
+<p>商品情報：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">ブランド: NEXX
+シリーズ: WT3020H
+</code></pre></div></li>
+<li>
+<p>外形:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">本体の寸法: 4.5 x 2.2 cm (幅 × 高さ)
+本体重量: 27.2 g
+本体カラー: 白
+</code></pre></div></li>
+<li>
+<p>消費電力:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">電圧: 5V
+ワット数: 5 W
+電源: DC 5V 1A
+</code></pre></div></li>
+<li>
+<p>ハードウェア:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">CPU: MediaTek MT7620n (580 MHz)
+RAM: 64 MiB
+Flash: 8 MiB
+
+WiFi: 300mbps (802.11n, 802.11b, 802.11g)
+WiFi bands: 2.4GHz
+
+WAN: x1 100mbps port
+LAN: x1 100mbps port
+USB-ports: x1
+</code></pre></div></li>
+<li>
+<p>OpenWrtオフィシャルサイトのWT3020関連ページ:</p>
+</li>
+</ul>
+<p>　<a href="https://openwrt.org/toh/nexx/wt3020">OpenWrt Project: Nexx WT3020</a>
+　　</p>
+</div>
+
+
+<div id="comments">
+<div id="disqus_thread">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geekok" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="geekok"><a href="https://geekok.github.io/openwrt/">https://geekok.github.io/openwrt/</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/openwrt/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93480580-6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-93480580-6');
+      </script>
+    
+  
+
+
+</body>
+
+</html>

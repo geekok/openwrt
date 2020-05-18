@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>WT3020HをOpenWrt化する方法 - OpenWrt Geek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Droid+Sans%3A700%7CLato%3A900%7CAnton&#038;ver=5.2.6' type='text/css' media='all' />
+  
+  <link rel="icon" href="https://geekok.github.io/openwrt/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/openwrt/css/style.min.5487189c94ec777c5e6bfd361598139f1bebfeafda734028ab73c23c5840c1c4.css">
+  
+  
+  
+  <script data-ad-client="ca-pub-2935823567059327" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-ホーム">
+      <a href="/openwrt/">
+        <span>ホーム</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-使用方法">
+      <a href="/openwrt/usage/">
+        <span>使用方法</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://geekok.github.io/openwrt/"><img alt="Logo" src="/openwrt/images/router-logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://geekok.github.io/openwrt/"><img alt="Logo" src="/openwrt/images/router-logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-ホーム">
+      <a href="/openwrt/">
+        <span>ホーム</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-使用方法">
+      <a href="/openwrt/usage/">
+        <span>使用方法</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Usage</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/introduction-to-openwrt/">OpenWrtの紹介</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/introduction-to-wt3020-mini-router/">ミニルーターWT3020Hの紹介</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://geekok.github.io/openwrt/usage/install-openwrt-on-wt3020-replacing-factory-image/">WT3020HをOpenWrt化する方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-lan-ip/">LAN IP変更方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-wifi/">WiFiの設定方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-wan/">インターネット接続方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-system/">ルーター名及び時計の設定</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-set-japanese/">管理画面の日本語化</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-reset/">ルーターのリセット</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-upgrade/">アップグレード方法</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-backup-setting/">設定のバックアップと復元</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/">OpenVPNのインストール</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/">OpenVPNクライアントとして使う</a>
+    </li>
+    
+    <li class="">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-development/">OpenWrtの開発</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">WT3020HをOpenWrt化する方法</h1>
+<div class="content ">
+  <p>WT3020HのWeb管理画面で簡単に最新のOpenWrtファームウェアをインストールすることができます。</p>
+<h3 id="一最新のopenwrtファームウェアをインストール">一、最新のOpenWrtファームウェアをインストール</h3>
+<p>現在の最新バージョンは<code>19.07.2</code></p>
+<p>ファームウェアをダウンロード: <a href="http://downloads.openwrt.org/releases/19.07.2/targets/ramips/mt7620/openwrt-19.07.2-ramips-mt7620-wt3020-8M-squashfs-factory.bin">openwrt-19.07.2-ramips-mt7620-wt3020-8M-squashfs-factory.bin</a></p>
+<h3 id="二wt3020hルーターをネットとパソコンに接続">二、WT3020Hルーターをネットとパソコンに接続</h3>
+<p>WT3020HのWANポートに普段使用している無線ルーターをつなぎ、LANポートにパソコンをつなぐ（下図参照）。</p>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587634488/router/openwrt/router-pc.png" alt="connect wt3020"></p>
+<h3 id="三web管理ページからwt3020hにファームウェアを書き込む">三、Web管理ページからWT3020Hにファームウェアを書き込む</h3>
+<ol>
+<li>パソコンでブラウザのアドレスバーに<code>http://192.168.8.1</code>と入力し、管理画面を開く。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587631190/router/openwrt/wt3020-top-01.png" alt="wt3020 admin top page"></p>
+<ol start="2">
+<li><code>Advanced</code>⇒<code>System Tools</code>⇒<code>Upgrade Firmware</code>の順に開き、ファームウェアのアップグレード画面を開く。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587631473/router/openwrt/wt3020-firmware-upgrade-01.png" alt="wt3020 firmware upgrade"></p>
+<ol start="3">
+<li>ローカルからダウンロードした<code>openwrt-xxxx-squashfs-factory.bin</code>を選択し、<code>Open</code>をクリック。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587631947/router/openwrt/wt3020-firmware-upgrade-02.png" alt="wt3020 firmware upload"></p>
+<ol start="4">
+<li><code>Upgrade</code>をクリックし、ファームウェアの更新を行う。通常であれば5分以内に完了する。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587632150/router/openwrt/wt3020-firmware-upgrade-03.png" alt="wt3020 firmware upgrade"></p>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587632470/router/openwrt/wt3020-firmware-upgrade-04.png" alt="wt3020 firmware upgrade"></p>
+<ol start="5">
+<li>OpenWrtのデフォルトIPは<code>192.168.1.1</code>なので、ブラウザのアドレスを手動でこのアドレスに変更する。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587633058/router/openwrt/owt-01.png" alt="OpenWrt set admin password"></p>
+<ol start="6">
+<li>管理画面が表示されたら、まずルーターの管理人パスワードを設定する。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587633297/router/openwrt/owt-02.png" alt="OpenWrt set admin password"></p>
+<ol start="7">
+<li>新しいパスワードで管理画面に再ログインする。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587633422/router/openwrt/owt-03.png" alt="OpenWrt login"></p>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587718546/router/openwrt/owt-04.png" alt="OpenWrt top page"></p>
+</div>
+
+
+<div id="comments">
+<div id="disqus_thread">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "geekok" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="geekok"><a href="https://geekok.github.io/openwrt/">https://geekok.github.io/openwrt/</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/openwrt/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93480580-6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-93480580-6');
+      </script>
+    
+  
+
+
+</body>
+
+</html>
