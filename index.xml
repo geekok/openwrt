@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ミニルーターWT3020HでOpenWrt研究してみよう on OpenWrt Geek</title>
+    <link>https://geekok.github.io/openwrt/</link>
+    <description>Recent content in ミニルーターWT3020HでOpenWrt研究してみよう on OpenWrt Geek</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
+    
+	<atom:link href="https://geekok.github.io/openwrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenWrtの紹介</title>
+      <link>https://geekok.github.io/openwrt/usage/introduction-to-openwrt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/introduction-to-openwrt/</guid>
+      <description>&lt;p&gt;通常の無線ルーター製品はメーカー開発のファームウェア（ルーターのOS）内蔵で、指定された更新以外、一般のユーザーが別のファームウェアに入れ替えたり改造したりなどはできません。Web操作画面で変更できる内容は、インターネット接続情報や無線の設定など、最低限のみです。&lt;/p&gt;
+&lt;p&gt;市販の無線ルーターにはない機能が必要となる場合や、ルーターを研究したい場合など、ルーターに自分が開発したソフトをインストールしたい場合、最も良い選択肢は無線ルーターの出荷状態のファームウェアをOpenWrtのようなオープンソースのファームウェアに入れ替えることです。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>開発環境のインストール</title>
+      <link>https://geekok.github.io/openwrt/development/ubuntu-environment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/development/ubuntu-environment/</guid>
+      <description>準備中</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://geekok.github.io/openwrt/development/hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/development/hello-world/</guid>
+      <description>準備中</description>
+    </item>
+    
+    <item>
+      <title>ミニルーターWT3020Hの紹介</title>
+      <link>https://geekok.github.io/openwrt/usage/introduction-to-wt3020-mini-router/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/introduction-to-wt3020-mini-router/</guid>
+      <description>&lt;p&gt;OpenWrtをインストールできる無線ルーターは大きく分けて2種類あります。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WT3020HをOpenWrt化する方法</title>
+      <link>https://geekok.github.io/openwrt/usage/install-openwrt-on-wt3020-replacing-factory-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/install-openwrt-on-wt3020-replacing-factory-image/</guid>
+      <description>&lt;p&gt;WT3020HのWeb管理画面で簡単に最新のOpenWrtファームウェアをインストールすることができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LAN IP変更方法</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-set-lan-ip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-set-lan-ip/</guid>
+      <description>&lt;p&gt;市場に出ている大部分のルーターのデフォルトIPアドレスは&lt;code&gt;192.168.1.1&lt;/code&gt;なので、OpenWrtのIPも同じだとIPアドレスの競合が起こるため、別のIPアドレスに変更する必要があります。ここでは&lt;code&gt;192.168.120.1&lt;/code&gt;への変更を例に説明します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>WiFiの設定方法</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-set-wifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-set-wifi/</guid>
+      <description>&lt;p&gt;OpenWrtをインストール後、デフォルトではWiFiが無効になっています。WiFiを有効にするためには、少なくともSSIDとセキュリティ設定が必要です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>インターネット接続方法</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-set-wan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-set-wan/</guid>
+      <description>&lt;p&gt;OpenWrtルーターはインターネットに接続する方法として、通常の有線接続の他、他のWiFiのクライアントとして無線中継することができます。更に
+USBポートがある機種であれば、3G/4G USBモデムやiPhone/Android携帯のUSBテザリングも可能です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ルーター名及び時計の設定</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-set-system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-set-system/</guid>
+      <description>&lt;p&gt;&lt;code&gt;System&lt;/code&gt;管理画面でルーターの名前や時計の設定などができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>管理画面の日本語化</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-set-japanese/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-set-japanese/</guid>
+      <description>&lt;p&gt;OpenWrtにはデフォルトに日本語の管理画面がないのですが、&lt;code&gt;System&lt;/code&gt;⇒&lt;code&gt;Software&lt;/code&gt;管理画面で日本語のパッケージをインストールすると、簡単に管理画面を日本語にすることができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ルーターのリセット</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-reset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-reset/</guid>
+      <description>&lt;p&gt;ルーターの設定を全てクリアし、初期状態に戻したい場合は、管理画面でリセットすることができます。もし管理画面にアクセスできない場合は、ルーターのリセットボタンを爪楊枝の先などで押して初期化することもできます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>アップグレード方法</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-upgrade/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-upgrade/</guid>
+      <description>&lt;p&gt;OpenWrt化したルーターを、違うバージョンのOpenWrtファームウェアに簡単にアップグレードできます。ここではWeb管理画面でのアップグレード方法を紹介します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>設定のバックアップと復元</title>
+      <link>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</guid>
+      <description>&lt;p&gt;OpenWrtには設定のバックアップと復元機能が内蔵されています。せっかく苦労して設定した内容は、適切にバックアップすればルーターに問題が発生しても、簡単に復元することができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>設定のバックアップと復元</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-backup-setting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-backup-setting/</guid>
+      <description>&lt;p&gt;OpenWrtには設定のバックアップと復元機能が内蔵されています。せっかく苦労して設定した内容は、適切にバックアップすればルーターに問題が発生しても、簡単に復元することができます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenVPNのインストール</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/</guid>
+      <description>&lt;p&gt;OpenWrtで２種類のOpenVPNをインストール可能です。その2種類とは、&lt;code&gt;openvpn-openssl&lt;/code&gt;と &lt;code&gt;openvpn-mbedtls&lt;/code&gt;です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenVPNクライアントとして使う</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/</guid>
+      <description>&lt;p&gt;ミニルーターWT3020HにOpenVPNをインストールすれば、OpenVPNのサーバーとしてもクライアントとしても使えます。ここではクライアントとしての使い方の設定方法を説明します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenWrtの開発</title>
+      <link>https://geekok.github.io/openwrt/usage/openwrt-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekok.github.io/openwrt/usage/openwrt-development/</guid>
+      <description>準備中</description>
+    </item>
+    
+  </channel>
+</rss>
