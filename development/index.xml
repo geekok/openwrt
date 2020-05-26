@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dev on OpenWrt Geek</title>
+    <title>OpenWrtの開発 on OpenWrt Geek</title>
     <link>https://geekok.github.io/openwrt/development/</link>
-    <description>Recent content in Dev on OpenWrt Geek</description>
+    <description>Recent content in OpenWrtの開発 on OpenWrt Geek</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 10 May 2020 15:14:39 +1000</lastBuildDate>
@@ -12,30 +12,13 @@
     
     
     <item>
-      <title>開発環境のインストール</title>
+      <title>Ubuntu開発環境を準備する</title>
       <link>https://geekok.github.io/openwrt/development/ubuntu-environment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://geekok.github.io/openwrt/development/ubuntu-environment/</guid>
-      <description>準備中</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://geekok.github.io/openwrt/development/hello-world/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geekok.github.io/openwrt/development/hello-world/</guid>
-      <description>準備中</description>
-    </item>
-    
-    <item>
-      <title>設定のバックアップと復元</title>
-      <link>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</guid>
-      <description>&lt;p&gt;OpenWrtには設定のバックアップと復元機能が内蔵されています。せっかく苦労して設定した内容は、適切にバックアップすればルーターに問題が発生しても、簡単に復元することができます。&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenWrtをビルドするにはLinux環境が必要です。Linuxのディストリビューションは様々ありますが、OpenWrtの開発であればUbuntuを使うのが主流です。&lt;/p&gt;
+&lt;p&gt;UbuntuにはDesktopとServer、２つのエディションがありますが、Linuxの基礎部分は同じですので、OpenWrtのビルドについてはどちらでも構いません。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -22,21 +22,13 @@
     </item>
     
     <item>
-      <title>開発環境のインストール</title>
+      <title>Ubuntu開発環境を準備する</title>
       <link>https://geekok.github.io/openwrt/development/ubuntu-environment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://geekok.github.io/openwrt/development/ubuntu-environment/</guid>
-      <description>準備中</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://geekok.github.io/openwrt/development/hello-world/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geekok.github.io/openwrt/development/hello-world/</guid>
-      <description>準備中</description>
+      <description>&lt;p&gt;OpenWrtをビルドするにはLinux環境が必要です。Linuxのディストリビューションは様々ありますが、OpenWrtの開発であればUbuntuを使うのが主流です。&lt;/p&gt;
+&lt;p&gt;UbuntuにはDesktopとServer、２つのエディションがありますが、Linuxの基礎部分は同じですので、OpenWrtのビルドについてはどちらでも構いません。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -123,15 +115,6 @@ USBポートがある機種であれば、3G/4G USBモデムやiPhone/Android携
     
     <item>
       <title>設定のバックアップと復元</title>
-      <link>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geekok.github.io/openwrt/development/openwrt-backup-setting/</guid>
-      <description>&lt;p&gt;OpenWrtには設定のバックアップと復元機能が内蔵されています。せっかく苦労して設定した内容は、適切にバックアップすればルーターに問題が発生しても、簡単に復元することができます。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>設定のバックアップと復元</title>
       <link>https://geekok.github.io/openwrt/usage/openwrt-backup-setting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -155,15 +138,6 @@ USBポートがある機種であれば、3G/4G USBモデムやiPhone/Android携
       
       <guid>https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/</guid>
       <description>&lt;p&gt;ミニルーターWT3020HにOpenVPNをインストールすれば、OpenVPNのサーバーとしてもクライアントとしても使えます。ここではクライアントとしての使い方の設定方法を説明します。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>OpenWrtの開発</title>
-      <link>https://geekok.github.io/openwrt/usage/openwrt-development/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://geekok.github.io/openwrt/usage/openwrt-development/</guid>
-      <description>準備中</description>
     </item>
     
   </channel>

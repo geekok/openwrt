@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>開発環境のインストール - OpenWrt Geek</title>
+  <title>Ubuntu開発環境を準備する - OpenWrt Geek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Droid+Sans%3A700%7CLato%3A900%7CAnton&#038;ver=5.2.6' type='text/css' media='all' />
   
@@ -36,6 +36,12 @@
       </a>
     </li>
     
+    <li class="menu-item-openwrt開発">
+      <a href="/openwrt/development/">
+        <span>OpenWrt開発</span>
+      </a>
+    </li>
+    
   </ul>
 </div>
   <div class="wrapper">
@@ -63,6 +69,12 @@
       </a>
     </li>
     
+    <li class="menu-item-openwrt開発">
+      <a href="/openwrt/development/">
+        <span>OpenWrt開発</span>
+      </a>
+    </li>
+    
   </ul>
 </div>
     <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
@@ -78,13 +90,103 @@
     
     
     
+    
+    
+    
+    
 
     
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Development</h4>
+  <ul>
     
-<h1 class="title">開発環境のインストール</h1>
+    <li class="active ">
+      <a href="https://geekok.github.io/openwrt/development/ubuntu-environment/">Ubuntu開発環境を準備する</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Ubuntu開発環境を準備する</h1>
 <div class="content ">
-  <p>準備中</p>
+  <p>OpenWrtをビルドするにはLinux環境が必要です。Linuxのディストリビューションは様々ありますが、OpenWrtの開発であればUbuntuを使うのが主流です。</p>
+<p>UbuntuにはDesktopとServer、２つのエディションがありますが、Linuxの基礎部分は同じですので、OpenWrtのビルドについてはどちらでも構いません。</p>
+<p>OpenWrtビルドに掛かる時間はCPUのスピードに大きく依存するので、頻繁にビルドするなら、低スペックのVPSバーチャルサーバーはお勧めしません。PCの場合はIntel i3以上のCPUを推奨します。</p>
+<p>ここでは、<code>ubuntu server 20.04 LTS</code>でのビルド環境について説明します。</p>
+<h2 id="一依存パッケージをインストールする">一、依存パッケージをインストールする</h2>
+<p>以下のコマンドでUbuntuにOpenWrtビルドするための依存パッケージをインストールします。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get update
 
+sudo apt-get install -y subversion git g++ flex patch libncurses5-dev zlib1g-dev libssl-dev gawk xz-utils unzip libp11-kit-dev libmbedtls-dev
+
+sudo apt-get install -y gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libmbedtls-dev libev-dev libudns-dev libsodium-dev
+</code></pre></div><h2 id="二gitでopenwrtソースコードを引っ張ってくる">二、gitでOpenWrtソースコードを引っ張ってくる</h2>
+<p>GitHubのミラーもありますが、できるだけ下記のようにオフィシャルのサイトから最新のソースをクローンしてください。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~
+git clone https://git.openwrt.org/openwrt/openwrt.git openwrt
+</code></pre></div><h2 id="三software-feedを引っ張ってくる">三、Software feedを引っ張ってくる</h2>
+<p><code>Feed</code>とは、ファームウェアにインストールされるパッケージをビルドしてインストールする Makefile の集合体です。
+Ubuntuの<code>apt update</code>のコマンドのように、リモートからパッケージの設定やビルドスクリプトを落としてきます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd openwrt
+./scripts/feeds update
+./scripts/feeds install -a
+</code></pre></div><h2 id="四ビルドのconfigを作る">四、ビルドのconfigを作る</h2>
+<p>OpenWrtをビルドするには、ビルドのconfigファイルが必要です。configファイルにはその設定ファイルがどのルーターに向き、どのパッケージをインストールするかが記載されています。</p>
+<p>以下のコマンドでビルドのconfigの作成や編集を行います。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">make menuconfig
+</code></pre></div><ol>
+<li>Nexx WT3020Hに向けたビルドにするには、最低限以下を選択する:</li>
+</ol>
+<ul>
+<li><code>Target System</code> &mdash;&gt; <code>MediaTek Ralink MIPS</code></li>
+<li><code>Subtarget</code> &mdash;&gt; <code>MT7620 based boards</code></li>
+<li><code>Target Profile</code> &mdash;&gt; <code>Nexx WT3020 8M</code></li>
+</ul>
+<ol start="2">
+<li>Web管理画面は欠かせないので、下記の内容も選択してください。</li>
+</ol>
+<ul>
+<li><code>LuCI</code> &mdash;&gt; <code>Collections</code> &mdash;&gt; <code>luci</code></li>
+<li><code>LuCI</code> &mdash;&gt; <code>Themes</code> &mdash;&gt; <code>luci-theme-bootstrap</code></li>
+<li><code>LuCI</code> &mdash;&gt; <code>Modules</code> &mdash;&gt; <code>Translations</code> &mdash;&gt; <code>English</code>  (或いは他の言語)</li>
+</ul>
+<ol start="3">
+<li>最後はSaveを選択し、Exitすればビルドのconfigファイルが作成されます。</li>
+</ol>
+<h2 id="五ビルドする">五、ビルドする</h2>
+<p>ビルドのコマンドは<code>make</code>ですが、詳細の過程を見たい場合は、<code>V=s</code>のオプションを付けてください。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">make V=s
+</code></pre></div><p>ビルドの時間はCPUのパワーやコア数に依存します。i3以上のCPUなら、通常30分以内に完了します。変更が少ない場合は、2回目以降のビルドは数分しかかかりません。</p>
+<p>また、CPUのコア数の範囲内で複数のコアを使うことによって、ビルドの時間を短縮することが可能です。</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># 例えば、３つのコアの使用を指定する場合 -j3 をつける
+make V=s -j3
+</code></pre></div><p>ただ、ときに複数コアを使うと、エラーが出る場合があります。その場合は、コアの指定をなしにしてください。</p>
+<h2 id="六ビルドしたファームウェアのファイルの場所">六、ビルドしたファームウェアのファイルの場所</h2>
+<p>ビルドに成功すると、<code>bin/targets/ramips/mt7620/</code>のフォルダに下記のファームウェアのファイルが作成されます。</p>
+<ul>
+<li>
+<p>openwrt-ramips-mt7620-nexx_wt3020-8m-squashfs-factory.bin</p>
+<p>出荷状態からOpenWrtに入れ替えるためのもの</p>
+</li>
+<li>
+<p>openwrt-ramips-mt7620-nexx_wt3020-8m-squashfs-sysupgrade.bin</p>
+<p>OpenWrt化したルーターを更新するためのもの</p>
+</li>
+</ul>
+<p>できたファイルをNexx WT3020Hルーターに入れれば、最新のOpenWrtになります。</p>
+<h2 id="七参考サイト">七、参考サイト</h2>
+<ul>
+<li><a href="https://openwrt.org/docs/guide-developer/quickstart-build-images">OpenWrt Project: Quick Image Building Guide</a></li>
+</ul>
 </div>
 
 
@@ -119,6 +221,9 @@
 
 
 
+        </div>
+      </div>
+    </div>
     
   </div>
 
