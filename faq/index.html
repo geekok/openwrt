@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>OpenWrtの開発 - OpenWrt Geek</title>
+  <title>WT3020ミニルーターの入門 - OpenWrt Geek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://geekok.github.io/openwrt/favicon.png">
@@ -103,12 +103,8 @@
           <div class="sidebar">
             
 <div class="docs-menu">
-  <h4>Development</h4>
+  <h4>Faq</h4>
   <ul>
-    
-    <li class="">
-      <a href="https://geekok.github.io/openwrt/development/ubuntu-environment/">Ubuntu開発環境を準備する</a>
-    </li>
     
   </ul>
 </div>
@@ -119,19 +115,33 @@
           
 
 <span class="overview">Overview</span>
-<h1 class="title">OpenWrtの開発</h1>
+<h1 class="title">WT3020ミニルーターの入門</h1>
 <div class="content">
-  <h2 id="自分だけのファームウェアを作りたい人へ">自分だけのファームウェアを作りたい人へ</h2>
-<p>ルーターに自分だけの特別なカスタマイズがしたい人や、自分のルーターアプリを開発したい人などに参考にしてほしいページです。</p>
+  <h3 id="wt3020ミニルーターの強みと弱み">WT3020ミニルーターの強みと弱み</h3>
+<p>このミニルーターはLAN/WANの通信スピードは最大100Mbps、WiFiは最大300Mbpsですので、家庭用メインルーターとしては適しません。
+家庭用メインルーターであれば、WAN/LANポートは1Gbps以上、WiFi6には対応している無線ルーターを推奨します。</p>
+<p>このミニルーターはクレジットカードより小さく携帯に便利ですので、出張先やホテルなどで有線LAN環境を無線LAN環境にしたい方や、自分専用のWiFi環境が欲しい方などに向いています。</p>
+<p>また、このミニルーターはOpenWrtのファームウェアに入れ替えられるので、OpenWrtの勉強やネット技術開発、その他VPNルーターへのDIY改造などができる希少な格安ハードウェアです。</p>
+<h3 id="初期設定配線と管理画面">初期設定：配線と管理画面</h3>
+<h4 id="-wt3020ミニルーターをネットとパソコンに接続する">■ WT3020ミニルーターをネットとパソコンに接続する</h4>
+<p>WT3020のWANポートに普段使用している無線ルーターをつなぎ、LANポートにパソコンをつなぐ（下図参照）。</p>
+<ul>
+<li>親ルーターに繋ぐ場合（推奨）</li>
+</ul>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1588749563/router/openwrt/openwrt-wan-dhcp-1.png" alt="connect wt3020-dhcp"></p>
+<ul>
+<li>親ルーターがなく、直接モデムに繋ぐ場合
+<img src="https://res.cloudinary.com/gntline/image/upload/v1588749560/router/openwrt/openwrt-wan-pppoe-1.png" alt="connect wt3020-pppoe"></li>
+</ul>
+<h4 id="-web管理ページにアクセスする">■ Web管理ページにアクセスする</h4>
+<p>パソコンでブラウザのアドレスバーに<code>http://192.168.8.1</code>と入力し、管理画面を開く。</p>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1587631190/router/openwrt/wt3020-top-01.png" alt="wt3020 admin top page"></p>
+<h3 id="-うまく接続できない場合">■ うまく接続できない場合</h3>
+<ul>
+<li>親ルーター（或いはモデム）からのケーブルが、このミニルーターのWANポートに正しく接続されているかをチェックしてください。</li>
+<li>パソコンとミニルーターをWi-Fiでつなぐ場合、ミニルーターのLANポートは使わず、何も挿さない状態にしてください。</li>
+</ul>
 
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://geekok.github.io/openwrt/development/ubuntu-environment/">Ubuntu開発環境を準備する</a></h2>
-  <p><p>OpenWrtをビルドするにはLinux環境が必要です。Linuxのディストリビューションは様々ありますが、OpenWrtの開発であればUbuntuを使うのが主流です。</p>
-<p>UbuntuにはDesktopとServer、２つのエディションがありますが、Linuxの基礎部分は同じですので、OpenWrtのビルドについてはどちらでも構いません。</p></p>
 </div>
 
 
