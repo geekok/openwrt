@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>OpenVPNのインストール - OpenWrt Geek</title>
+  <title>OpenVPNサーバーとして使う - OpenWrt Geek</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://geekok.github.io/openwrt/favicon.png">
@@ -148,12 +148,16 @@
       <a href="https://geekok.github.io/openwrt/usage/openwrt-backup-setting/">設定のバックアップと復元</a>
     </li>
     
-    <li class="active ">
+    <li class="">
       <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/">OpenVPNのインストール</a>
     </li>
     
     <li class="">
       <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/">OpenVPNクライアントとして使う</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://geekok.github.io/openwrt/usage/openwrt-openvpn-server/">OpenVPNサーバーとして使う</a>
     </li>
     
   </ul>
@@ -163,56 +167,15 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">OpenVPNのインストール</h1>
+<h1 class="title">OpenVPNサーバーとして使う</h1>
 <div class="content ">
-  <p>OpenWrtで２種類のOpenVPNをインストール可能です。その2種類とは、<code>openvpn-openssl</code>と <code>openvpn-mbedtls</code>です。</p>
-<p>この2つは基本機能は同じですが、openssl版は汎用性が高いです。その代わりサイズが大きく、1MBの容量が必要です。
-一方、mbedtls版のサイズは三分の一しかないので、Flashが少ないルーターでは断然<code>openvpn-mbedtls</code>がお勧めです。</p>
-<h3 id="一openvpnをインストール">一、OpenVPNをインストール</h3>
-<ol>
-<li>管理画面のメニューから、<code>System</code> ⇒ <code>Software</code>の順に開き、Softwareの設定画面を開く。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1588145462/router/openwrt/owt-soft-01.png" alt="OpenWrt Software"></p>
-<ol start="2">
-<li>「Software」の設定画面で、「Actions」の項の<code>Update lists</code>ボタンをクリック。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1588145462/router/openwrt/owt-soft-02.png" alt="OpenWrt Software Update"></p>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1588145462/router/openwrt/owt-soft-03.png" alt="OpenWrt Software Update done"></p>
-<ol start="3">
-<li>リストの更新が完了してから、「Software」の設定画面で、<code>Filter</code>の項目に「openvpn-mbedtls」を入力する。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-01.png" alt="OpenWrt Search openvpn"></p>
-<ol start="4">
-<li>リストに表示された<code>openvpn-mbedtls</code>の右の<code>install</code>ボタンをクリックすると、パッケージの確認画面が表示される。左下の「Overwrite files from other package(s)」のチェックを入れて、右下の<code>install</code>ボタンをクリックすると、インストールが始まる。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-02.png" alt="OpenWrt openvpn installation"></p>
-<ol start="5">
-<li>下記の画面が表示されたら、「openvpn-mbedtls」パッケージのインストール成功となる。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-03.png" alt="OpenWrt openvpn installation end"></p>
-<ol start="6">
-<li>管理画面でopenvpnを設定したい場合は、引き続きOpenVPNのWeb操作画面のパッケージ(luci-app-openvpn)をインストールする必要がある。</li>
-</ol>
-<h3 id="二openvpnのweb操作画面をインストール">二、OpenVPNのWeb操作画面をインストール</h3>
-<ol>
-<li>リストの更新が完了してから、「Software」の設定画面で、<code>Filter</code>の項目に「luci-app-openvpn」を入力する。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-04.png" alt="OpenWrt luci-app-openvpn"></p>
-<ol start="2">
-<li>リストに表示された<code>luci-app-openvpn</code>の右の<code>install</code>ボタンをクリックすると、パッケージの確認画面が表示される。左下の「Overwrite files from other package(s)」にチェックを入れて、右下の<code>install</code>ボタンをクリックすると、インストールが始まる。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-06.png" alt="OpenWrt luci app openvpn confirm"></p>
-<ol start="3">
-<li>下記の画面が表示されたら、「luci-app-openvpn」パッケージのインストール成功となる。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589097667/router/openwrt/owt-openvpn-install-07.png" alt="OpenWrt luci app openvpn end"></p>
-<ol start="4">
-<li>管理画面をリロードすると、「VPN」のメニューが表示される。</li>
-</ol>
-<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589098543/router/openwrt/owt-openvpn-menu.png" alt="OpenWrt luci app openvpn end"></p>
-<ol start="5">
-<li>日本語のOpenVPN Web管理画面が必要であれば、上記のように引き続き「luci-i18n-openvpn-ja」をインストールする。</li>
-</ol>
+  <p>ミニルーターWT3020HにOpenVPNをインストールすれば、OpenVPNのサーバーとしてもクライアントとしても使えます。ここではサーバーとしての使い方の設定方法を説明します。</p>
+<p><img src="https://res.cloudinary.com/gntline/image/upload/v1589184550/router/openwrt/openwrt-openvpn-home-server.png" alt="OpenWrt openvpn server"></p>
+<ul>
+<li><a href="https://github.com/thesparklabs/openvpn-configuration-generator">thesparklabs/openvpn-configuration-generator: OpenVPN Configuration Generator</a></li>
+<li><a href="https://www.sparklabs.com/blog/openvpn-configuration-generator/">OpenVPN Configuration Generator - SparkLabs</a></li>
+<li><a href="https://gist.github.com/brianbruggeman/f032f5b8e4b7fc1c63c8691071be5946#file-viscosity-to-openvpn-py">Convert Viscosity to Open VPN</a></li>
+</ul>
 </div>
 
 

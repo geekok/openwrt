@@ -1,84 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://geekok.github.io/openwrt/development/</loc>
     <lastmod>2020-05-10T15:14:39+10:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/</loc>
     <lastmod>2018-11-28T15:14:39+10:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/introduction-to-openwrt/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/development/ubuntu-environment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/introduction-to-wt3020-mini-router/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/install-openwrt-on-wt3020-replacing-factory-image/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-set-lan-ip/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-set-wifi/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-set-wan/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-set-system/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-set-japanese/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-reset/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-upgrade/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-backup-setting/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-openvpn-install/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/usage/openwrt-openvpn-client/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/</loc>
     <lastmod>2018-11-28T15:14:39+10:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://geekok.github.io/openwrt/tags/</loc>
   </url>
-  
 </urlset>
